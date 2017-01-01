@@ -1,0 +1,70 @@
+@import "./theme/default";
+
+@btn-prefix-cls:~"@{lbb-prefix}-primary-btn";
+@link-prefix-cls:~"@{lbb-prefix}-link";
+@list-prefix-cls:~"@{lbb-prefix}-list";
+@banner-prefix-cls:~"@{lbb-prefix}-banner";
+
+.@{banner-prefix-cls}{
+	height:184px;
+}
+.swiper-slide {
+	height: 180px;
+	background-size: cover;
+}
+.swiper-pagination-bullet{
+	background: transparent;
+	opacity: 1;
+	border: 2px solid #fff;
+}
+.swiper-pagination-bullet-active{
+	background: #fff;
+}
+
+
+@charset "utf-8";
+@white : #fff;
+@orange : #ff6633;
+@black:#000;
+@gray:#888;
+@darkgray:#222;
+@linegray:#ececec;
+@blue:#1b8bed;
+@font20:20*@rem;
+@font21:21*@rem;
+@font24:24*@rem;
+@font28:28*@rem;
+@font32:32*@rem;
+@rem : 0.02rem;/*使用方法：width:750*@rem;满屏是750px*/
+
+/*一元夺宝*/
+	/*滑动广告*/
+	.yiyuan-swiper {width: 750*@rem;height: 380*@rem;}
+	.yiyuan-swiper img { width: 100%;}
+	.yiyuan-swiper .swiper-pagination-bullet {border:2px @white solid; background: transparent; opacity: .5; width: 10*@rem; height:10*@rem; border-radius: 50%; }
+	.yiyuan-swiper .swiper-pagination-bullet-active {border:2px @white solid; background: @white;opacity: 1;}
+	/*通知条*/
+	.notice-bar { width: 100%; height: 70*@rem; border-bottom:1px @linegray solid; line-height:70*@rem; text-align: center; font-size: @font24; display: block; }
+	.notice-bar i{ width: 40*@rem; height: 40*@rem; display: inline-block;vertical-align: middle; background: url(../images/yiyuan.png) no-repeat 0 0; background-size:40*@rem auto; }
+	.notice-bar span { vertical-align: middle}
+	.notice-bar span em {color:@darkgray;}
+	/*宝物列表*/
+	.treasure-box { margin: 0 33*@rem; padding:33*@rem 0; border-bottom:1px @linegray solid;  display: -moz-box;display: -webkit-box;display: box; overflow: hidden;}
+	.treasure-box .photo { width:35%;}
+	.treasure-box .photo img { width: 100%;}
+	.treasure-box .content { width:65%; padding-left: 35*@rem; box-sizing: border-box; position: relative;}
+	.treasure-box .content .title {font-size: @font28; color: #2f2e37; line-height: 35*@rem;}
+	.treasure-box .content .intor {font-size: @font24; color: #acaab8; line-height: 27*@rem;}
+	.treasure-box .content .progress { width: 100%; height: 10*@rem; background: #e8f3fd; margin: 15*@rem 0; border-radius: 10*@rem;}
+	.treasure-box .content .progress i { width:1px; height: 10*@rem;background: #36b6f6;border-radius: 10*@rem; display: block; transition: all 1s;}
+	.treasure-box .content .total {font-size: @font20; color: @black;  line-height: 28*@rem;}
+	.treasure-box .content .total i {font-size: @font20; color: @gray;}
+	.treasure-box .content .surplus {font-size: @font20; color: @black; line-height: 28*@rem;}
+	.treasure-box .content .surplus i {font-size: @font20; color: @blue;}
+	.treasure-box .content .join { font-size: @font24;width: 150*@rem; height: 52*@rem;line-height: 52*@rem; background: #1a92ee; display: block; position: absolute; bottom: 10*@rem; right:0; text-align: center; color: #fff; border-radius: 5*@rem;}
+
+
+
+
+
+
