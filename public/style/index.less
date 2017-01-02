@@ -10,7 +10,10 @@
 }
 .swiper-slide {
 	height: 180px;
-	background-size: cover;
+	overflow: hidden;
+	img{
+		width: 100%;
+	}
 }
 .swiper-pagination-bullet{
 	background: transparent;
@@ -37,6 +40,200 @@
 @font32:32*@rem;
 @rem : 0.02rem;/*使用方法：width:750*@rem;满屏是750px*/
 
+
+/*弹出框*/
+.pop_bg{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    z-index: 99;
+    display: none;
+}
+.pop_bg.show{
+    display: block;
+}
+.pop_container{
+    position: absolute;
+    bottom: 0px;
+    background: #fff;
+    width: 100%;
+}
+.pop_container h3{
+    position: relative;
+  	height: 88*@rem;
+  	line-height: 88*@rem;
+    text-align: center;
+    overflow: hidden;
+}
+.pop_container h3 .title{
+    font-size: 32*@rem;
+    color: @black;
+    margin: 0 33*@rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+.pop_container h3 .colsed{
+    position: absolute;
+    right: 10*@rem;
+    top: 15*@rem;
+   	width: 40*@rem;
+    height: 40*@rem;
+    background: url(../images/icons.png) no-repeat center ;
+    background-size: 40*@rem;
+    display: inline-block;
+}
+.pop_content {
+	overflow: hidden;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    margin:25*@rem 64*@rem;
+}
+.pop_content .photo{
+	width:30%;
+	img{
+		width: 100%;
+	}
+}
+.pop_content .content {
+	 width:70%;
+	 padding-top: 15*@rem;
+	 padding-left: 35*@rem;
+	 box-sizing: border-box;
+	 position: relative;
+ 	.title {
+ 		overflow: hidden;
+ 		font-size: @font28;
+ 		color: #2f2e37;
+ 		line-height: 45*@rem;
+ 		height: 90*@rem;
+ 		text-overflow:ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+ 	}
+ 	.intor {
+ 		font-size: @font24;
+ 		color: #acaab8;
+ 		line-height: 28*@rem;
+ 		margin-top: 20*@rem;
+ 		overflow: hidden;
+ 		height: 54*@rem;
+ 		text-overflow:ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+ 	}
+
+}
+.selects{
+	display: flex;
+	width: 600*@rem;
+	margin: 30*@rem auto;
+	button{
+		border:1px solid #acaab8;
+		width: 150*@rem;
+		height: 50*@rem;
+		line-height:50*@rem;
+		margin:0 28*@rem;
+		text-align: center;
+		color:#acaab8;
+		font-size: 27*@rem;
+		background: #fff;
+		&.selected{
+			border-color: @blue;
+			color: @blue;
+		}
+	}
+
+}
+
+.boxContainer{
+	width: 550*@rem;
+	margin: 35*@rem auto;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+	.inputBox{
+		position: relative;
+		border: 1px solid #acaab8;
+		input{
+			height: 50*@rem;
+			width: 306*@rem;
+			border: none;
+			text-align: center;
+		}
+		button{
+			position: absolute;
+			height: 50*@rem;
+			line-height: 50*@rem;
+			width: 50*@rem;
+			text-align: center;
+			border: none;
+			background: #fff;
+			top:0;
+			color:#acaab8;
+			font-size: 27*@rem;
+			&.add{
+				right:0;
+				border-left: 1px solid #acaab8;
+			}
+			&.reduce{
+				left: 0;
+				border-right: 1px solid #acaab8;
+			}
+		}
+	}
+	.msg{
+		padding-left:20*@rem;
+		line-height: 52*@rem;
+		color:#acaab8;
+		span{
+			color:@blue;
+		}
+		}
+}
+.pop_container .footer{
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+	height: 96*@rem;
+	line-height: 96*@rem;
+	border-top: 1px solid #acaab8;
+
+	.total{
+		width: 60%;
+		padding-left:40*@rem;
+		font-size: 32*@rem;
+		span{
+			color:#ff491f;
+		}
+	}
+	.buyBtn{
+		width: 40%;
+		background: @blue;
+		color:#fff;
+		display: block;
+		border:none;
+		font-size: 32*@rem;
+	}
+}
+
+
+
+
+.pop_container a{
+    color: #37bb8a;
+    font-size: 20px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+}
+
+
+
+
 /*一元夺宝*/
 	/*滑动广告*/
 	.yiyuan-swiper {width: 750*@rem;height: 380*@rem;}
@@ -61,7 +258,7 @@
 	.treasure-box .content .total i {font-size: @font20; color: @gray;}
 	.treasure-box .content .surplus {font-size: @font20; color: @black; line-height: 28*@rem;}
 	.treasure-box .content .surplus i {font-size: @font20; color: @blue;}
-	.treasure-box .content .join { font-size: @font24;width: 150*@rem; height: 52*@rem;line-height: 52*@rem; background: #1a92ee; display: block; position: absolute; bottom: 10*@rem; right:0; text-align: center; color: #fff; border-radius: 5*@rem;}
+	.treasure-box .content .join { font-size: @font24;width: 150*@rem; height: 52*@rem;line-height: 52*@rem; background: #1a92ee; display: block; position: absolute; bottom: 10*@rem; right:0; text-align: center; color: #fff; border-radius: 5*@rem; border: none;}
 
 
 

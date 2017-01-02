@@ -5,7 +5,7 @@ function posts(state = {
   //是否正在获取最新
   isFetching: false,
   //内容
-  items: []
+  items: {}
 }, action) {
   switch (action.type) {
     case TYPES.REQUEST_POSTS:

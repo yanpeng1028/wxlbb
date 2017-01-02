@@ -37,6 +37,10 @@ export function FormatMoney(s) {
     };
     return decimal;
   }//取两位小数
+ export function getPrecent(decimal1, decimal2){
+    var decimal = Math.floor((decimal2-decimal1)/decimal2*100)+"%";
+    return decimal;
+  }//取两位小数
  export function getTime(t){
        t = t &&  t.substring(0, 10)+ " "+ t.substring(11, 16);
         return t;

@@ -8,7 +8,7 @@ import * as TYPES from '../constants';
 
 //获取，先触发requestPosts开始获取action，完成后触发receivePosts获取成功的action
 export function fetchPosts(ApiName, header, param) {
-  let headers = merge({"Content-Type":"application/json"}, header);
+  let headers = merge({"Content-Type":"application/json","X-Client-Agent":"weixin", "X-APIVersion":"2.0"}, header);
   let params = param || "";
   return requestPost(ApiName,headers,params);
 }
